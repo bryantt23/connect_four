@@ -4,21 +4,23 @@ require_relative '../lib/grid'
 
 RSpec.describe Grid do
   let(:grid) { Grid.new }
-
   describe '#make_move' do
     it 'places X in the bottom row of an empty column' do
-      grid.make_move('X', 0)
+      result = grid.make_move('X', 0)
+      expect(result).to be true
       expect(grid.grid[5][0]).to eq('X')
     end
 
     it 'stacks O on top of X in the same column' do
       grid.make_move('X', 0)
-      grid.make_move('O', 0)
+      result = grid.make_move('O', 0)
+      expect(result).to be true
       expect(grid.grid[4][0]).to eq('O')
     end
 
     it 'places X in the bottom row of a different column' do
-      grid.make_move('X', 1)
+      result = grid.make_move('X', 1)
+      expect(result).to be true
       expect(grid.grid[5][1]).to eq('X')
     end
 

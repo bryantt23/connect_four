@@ -18,6 +18,7 @@ class Grid
       row = @grid.length - 1
       row -= 1 while @grid[row][column] != '_'
       @grid[row][column] = symbol
+      true
     end
   end
 
