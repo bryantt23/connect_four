@@ -36,27 +36,27 @@ RSpec.describe View do
   end
 
   describe '#invalid_column' do
-    xit 'prints an invalid column message' do
+    it 'prints an invalid column message' do
       expect { view.invalid_column }.to output("Invalid column. Please select a different column.\n").to_stdout
     end
   end
 
   describe '#show_winner' do
-    xit 'prints X wins message' do
+    it 'prints X wins message' do
       expect { view.show_winner('X') }.to output("X wins!\n").to_stdout
     end
 
-    xit 'prints O wins message' do
+    it 'prints O wins message' do
       expect { view.show_winner('O') }.to output("O wins!\n").to_stdout
     end
 
-    xit 'prints tie message' do
+    it 'prints tie message' do
       expect { view.show_winner('Tie') }.to output("It is a tie.\n").to_stdout
     end
   end
 
   describe '#play_again' do
-    xit 'prints the play again prompt' do
+    it 'prints the play again prompt' do
       expect { view.play_again }.to output("Press Enter to play again or E(x)it.\n").to_stdout
     end
   end
