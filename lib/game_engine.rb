@@ -12,6 +12,8 @@ class GameEngine
     play_game
   end
 
+  private
+
   def play_game
     @grid = Grid.new
     @view.welcome
@@ -39,8 +41,6 @@ class GameEngine
       end
     end
   end
-
-  private
 
   def change_player
     @current_player = if @current_player == 'X'
