@@ -29,4 +29,8 @@ class View
   def play_again
     puts 'Press Enter to play again or E(x)it.'
   end
+
+  def goodbye
+    puts "Thanks for playing Connect Four"
+  end
 end
